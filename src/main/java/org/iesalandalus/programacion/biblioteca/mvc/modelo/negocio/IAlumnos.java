@@ -7,6 +7,10 @@ import javax.naming.OperationNotSupportedException;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Alumno;
 
 public interface IAlumnos {
+	
+	void comenzar();
+	
+	void terminar();
 
 	List<Alumno> get() throws IllegalArgumentException, NullPointerException;
 
