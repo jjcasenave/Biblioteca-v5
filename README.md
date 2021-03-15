@@ -1,6 +1,6 @@
 # Tarea: Biblioteca IES Al-Ándalus
 ## Profesor: José Ramón Jiménez Reyes
-## Alumno:
+## Alumno: Juan José Casenave Alonso
 
 Desde el IES Al-Ándalus nos acaban de comentar que por favor añadamos persistencia a los datos introducidos, ya que tal y como está ahora la aplicación no es funcional. Por tanto, en este **cuarto spring** añadiremos persistencia a los datos utilizando para ello ficheros de objetos, para lo que sustituiremos el modelo que teníamos de memoria, por un modelo de ficheros.
 
