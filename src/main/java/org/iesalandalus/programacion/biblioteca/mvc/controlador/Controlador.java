@@ -1,5 +1,3 @@
-/*Refactoriza la clase Controlador, extrayendo su interfaz. Realiza un commit*/
-
 package org.iesalandalus.programacion.biblioteca.mvc.controlador;
 
 import java.time.LocalDate;
@@ -39,11 +37,13 @@ public class Controlador implements IControlador {
 
 	@Override
 	public void comenzar() {
+		modelo.comenzar();
 		vista.comenzar();
 	}
 
 	@Override
 	public void terminar() {
+		modelo.terminar();
 		System.out.println("¡HASTA PRONTO!");
 	}
 
