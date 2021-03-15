@@ -5,7 +5,7 @@
  */
 package org.iesalandalus.programacion.biblioteca.mvc.modelo;
 
-import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.memoria.FactoriaFuenteDatosMemoria;
+import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.ficheros.FactoriaFuenteDatosFicheros;
 
 /**
  * @author Juanjo
@@ -13,10 +13,10 @@ import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.memoria.Facto
  */
 public enum FactoriaFuenteDatos {
 	
-	MEMORIA {
+	FICHEROS {
 		@Override
 		public IFuenteDatos crear() {
-			return new FactoriaFuenteDatosMemoria();
+			return new FactoriaFuenteDatosFicheros();
 		}
 	};
 

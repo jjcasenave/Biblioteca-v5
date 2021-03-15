@@ -11,7 +11,7 @@ import org.iesalandalus.programacion.biblioteca.mvc.vista.IVista;
 public class Biblioteca {
 
 	public static void main(String[] args) {
-		IModelo modelo = new Modelo(FactoriaFuenteDatos.MEMORIA.crear());
+		IModelo modelo = new Modelo(FactoriaFuenteDatos.FICHEROS.crear());
 		IVista vista = FactoriaVista.TEXTO.crear();
 		IControlador controlador = new Controlador(modelo, vista);
 		controlador.comenzar();

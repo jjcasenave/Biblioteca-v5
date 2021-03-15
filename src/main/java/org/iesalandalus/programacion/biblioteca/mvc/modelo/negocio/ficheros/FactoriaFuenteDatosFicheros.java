@@ -1,10 +1,10 @@
-package org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.memoria;
+package org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.ficheros;
 
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.IFuenteDatos;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.*;
 
 
-public class FactoriaFuenteDatosMemoria implements IFuenteDatos {
+public class FactoriaFuenteDatosFicheros implements IFuenteDatos {
 
 	public IAlumnos crearAlumnos() {
 		return new Alumnos();

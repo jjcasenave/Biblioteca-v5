@@ -15,7 +15,7 @@ import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Alumno;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Curso;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Libro;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Prestamo;
-import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.memoria.FactoriaFuenteDatosMemoria;
+import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.ficheros.FactoriaFuenteDatosFicheros;
 import org.iesalandalus.programacion.biblioteca.mvc.vista.IVista;
 import org.iesalandalus.programacion.biblioteca.mvc.vista.texto.VistaTexto;
 
@@ -31,7 +31,7 @@ public class Controlador implements IControlador {
 		if (vista == null) {
 			throw new IllegalArgumentException("ERROR: La vista no puede ser nula.");
 		}
-		IFuenteDatos iFuenteDatos = new FactoriaFuenteDatosMemoria();
+		IFuenteDatos iFuenteDatos = new FactoriaFuenteDatosFicheros();
 		this.modelo = new Modelo(iFuenteDatos);
 		this.vista = new VistaTexto();
 		this.vista.setControlador(this);
