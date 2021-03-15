@@ -21,9 +21,23 @@ public class Modelo implements IModelo {
 	private IAlumnos alumnos;
 	
 	public Modelo(IFuenteDatos fuenteDatos) {
-		prestamos = fuenteDatos.crearPrestamos();
-		libros = fuenteDatos.crearLibros();
 		alumnos = fuenteDatos.crearAlumnos();
+		libros = fuenteDatos.crearLibros();
+		prestamos = fuenteDatos.crearPrestamos();
+	}
+	
+	@Override
+	public void comenzar() {
+		alumnos.comenzar();
+		libros.comenzar();
+		prestamos.comenzar();
+	}
+
+	@Override
+	public void terminar() {
+		alumnos.terminar();
+		libros.terminar();
+		prestamos.terminar();
 	}
 	
 	@Override
