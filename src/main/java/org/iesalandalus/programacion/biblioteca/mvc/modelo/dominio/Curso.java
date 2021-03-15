@@ -5,7 +5,7 @@
 package org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio;
 
 public enum Curso {
-	
+
 	PRIMERO("1"), SEGUNDO("2"), TERCERO("3"), CUARTO("4");
 
 	String cadenaAMostrar;
@@ -17,5 +17,4 @@ public enum Curso {
 	public String toString() {
 		return cadenaAMostrar;
 	}
-
 }
