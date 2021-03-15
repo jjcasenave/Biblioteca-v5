@@ -7,6 +7,10 @@ import javax.naming.OperationNotSupportedException;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Libro;
 
 public interface ILibros {
+	
+	void comenzar();
+	
+	void terminar();
 
 	List<Libro> get();
 

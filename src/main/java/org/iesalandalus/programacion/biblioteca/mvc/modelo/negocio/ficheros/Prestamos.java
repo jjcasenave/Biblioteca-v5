@@ -1,5 +1,13 @@
 package org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.ficheros;
 
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -17,10 +25,57 @@ import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.IPrestamos;
 
 public class Prestamos implements IPrestamos {
 
+	private static final String NOMBRE_FICHERO_PRESTAMOS = "datos/prestamos.dat";
 	private List<Prestamo> coleccionPrestamos;
 
 	public Prestamos() throws IllegalArgumentException, NullPointerException {
 		coleccionPrestamos = new ArrayList<>();
+	}
+	
+	@Override
+	public void comenzar() {
+		leer();
+
+	}
+
+	private void leer() {
+		File ficheroAlumnos = new File(NOMBRE_FICHERO_PRESTAMOS);
+		try (ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(ficheroAlumnos))) {
+			Prestamo prestamo = null;
+			do {
+				prestamo = (Prestamo) entrada.readObject();
+				prestar(prestamo);
+			} while (prestamo != null);
+		} catch (ClassNotFoundException e) {
+			System.out.println("ERROR: No se encuentra la clase a leer.");
+		} catch (FileNotFoundException e) {
+			System.out.println("ERROR: No se puede abrir el fichero de alumnos.");
+		} catch (EOFException e) {
+			System.out.println("ERROR: Fichero de alumnos leído correctamente.");
+		} catch (IOException e) {
+			System.out.println("ERROR: Comportamiento inesperado en entrada/salida");
+		} catch (OperationNotSupportedException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	@Override
+	public void terminar() {
+		escribir();
+	}
+	
+	private void escribir() {
+		File ficheroAlumnos = new File(NOMBRE_FICHERO_PRESTAMOS);
+		try (ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream(ficheroAlumnos))) {
+			for (Prestamo prestamo : coleccionPrestamos) {
+				salida.writeObject(prestamo);
+			}
+			System.out.println("Fichero de alumnos creado de forma satisfactoria.");
+		} catch (FileNotFoundException e) {
+			System.out.println("ERROR: No se puede crear el fichero de alumnos.");
+		} catch (IOException e) {
+			System.out.println("ERROR: Comportamiento inesperado de entrada/salida.");
+		}
 	}
 
 	public List<Prestamo> get() {

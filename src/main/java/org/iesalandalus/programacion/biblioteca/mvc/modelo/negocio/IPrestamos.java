@@ -12,6 +12,10 @@ import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Libro;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Prestamo;
 
 public interface IPrestamos {
+	
+	void comenzar();
+	
+	void terminar();
 
 	List<Prestamo> get();
 
