@@ -20,7 +20,6 @@ import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Libro;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.LibroEscrito;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Prestamo;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.IPrestamos;
-import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.ficheros.Prestamos;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

@@ -15,7 +15,6 @@ import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.AudioLibro;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Libro;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.LibroEscrito;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.ILibros;
-import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.ficheros.Libros;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
