@@ -39,8 +39,8 @@ public class Prestamos implements IPrestamos {
 	}
 
 	private void leer() {
-		File ficheroAlumnos = new File(NOMBRE_FICHERO_PRESTAMOS);
-		try (ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(ficheroAlumnos))) {
+		File ficheroPrestamos = new File(NOMBRE_FICHERO_PRESTAMOS);
+		try (ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(ficheroPrestamos))) {
 			Prestamo prestamo = null;
 			do {
 				prestamo = (Prestamo) entrada.readObject();
