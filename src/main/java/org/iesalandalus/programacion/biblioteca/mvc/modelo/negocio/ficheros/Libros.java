@@ -46,7 +46,7 @@ public class Libros implements ILibros {
 		} catch (FileNotFoundException e) {
 			System.out.println("ERROR: No se puede abrir el fichero de libros.");
 		} catch (EOFException e) {
-			System.out.println("ERROR: Fichero de libros leído correctamente.");
+			System.out.println("Fichero de libros leído correctamente.");
 		} catch (IOException e) {
 			System.out.println("ERROR: Comportamiento inesperado en entrada/salida");
 		} catch (OperationNotSupportedException e) {

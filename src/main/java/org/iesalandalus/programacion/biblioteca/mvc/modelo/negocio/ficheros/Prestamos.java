@@ -51,7 +51,7 @@ public class Prestamos implements IPrestamos {
 		} catch (FileNotFoundException e) {
 			System.out.println("ERROR: No se puede abrir el fichero de alumnos.");
 		} catch (EOFException e) {
-			System.out.println("ERROR: Fichero de alumnos leído correctamente.");
+			System.out.println("Fichero de alumnos leído correctamente.");
 		} catch (IOException e) {
 			System.out.println("ERROR: Comportamiento inesperado en entrada/salida");
 		} catch (OperationNotSupportedException e) {
