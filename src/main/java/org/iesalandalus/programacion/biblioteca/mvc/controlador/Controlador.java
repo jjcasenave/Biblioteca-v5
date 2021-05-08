@@ -1,6 +1,3 @@
-//Haz las modificaciones oportunas en la clase Controlador para que al comenzar se lean los diferentes ficheros 
-//y al salir se escriban los mismos. Realiza un commit y súbelo a tu repositorio remoto.
-
 package org.iesalandalus.programacion.biblioteca.mvc.controlador;
 
 import java.time.LocalDate;
