@@ -12,22 +12,22 @@
          <children>
             <ImageView fitHeight="203.0" fitWidth="192.0" layoutX="94.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
                <image>
-                  <Image url="@../imagenes/dibujoprogramacion.png" />
+                  <Image url="@../imagenes/logoiesalandalus400x400.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="8.0" layoutY="257.0" prefHeight="20.0" prefWidth="334.0" style="-fx-font: 16 Arial;" text="JavaFX" textAlignment="JUSTIFY" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="257.0">
+            <Label alignment="CENTER" layoutX="8.0" layoutY="257.0" prefHeight="20.0" prefWidth="334.0" style="-fx-font: 16 Arial;" text="JavaFX" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="257.0">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
-            <Label layoutX="159.0" layoutY="291.0" text="Aplicación Biblioteca v4" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+            <Label alignment="CENTER" layoutX="159.0" layoutY="291.0" text="Aplicación Biblioteca v4" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
-            <Label layoutX="200.0" layoutY="325.0" prefHeight="16.0" prefWidth="349.0" text="Juan José Casenave Alonso" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <Label alignment="CENTER" layoutX="200.0" layoutY="325.0" prefHeight="16.0" prefWidth="349.0" text="Juan José Casenave Alonso" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
-            <Label layoutX="178.0" layoutY="357.0" text="2021" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <Label alignment="CENTER" layoutX="178.0" layoutY="357.0" text="2021" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
