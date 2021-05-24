@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright (c) 2015, 2019, Gluon and/or its affiliates. All rights reserved. 
+	Use is subject to license terms. This file is available and licensed under 
+	the following license: Redistribution and use in source and binary forms, 
+	with or without modification, are permitted provided that the following conditions 
+	are met: - Redistributions of source code must retain the above copyright 
+	notice, this list of conditions and the following disclaimer. - Redistributions 
+	in binary form must reproduce the above copyright notice, this list of conditions 
+	and the following disclaimer in the documentation and/or other materials 
+	provided with the distribution. - Neither the name of Oracle Corporation 
+	nor the names of its contributors may be used to endorse or promote products 
+	derived from this software without specific prior written permission. THIS 
+	SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+	IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+	INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
+	BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF 
+	USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY 
+	THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+	NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+	EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. -->
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="517.0" prefWidth="718.0" styleClass="vbox" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.biblioteca.mvc.vista.iugpestanas.controladoresvistas.ControladorVentanaPrincipal">
+	<children>
+		<MenuBar VBox.vgrow="NEVER">
+			<menus>
+				<Menu mnemonicParsing="false" text="Nuevo">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#nuevoPrestamo" text="Prestamo" />
+						<MenuItem mnemonicParsing="false" onAction="#nuevoLibro" text="Libro" />
+						<MenuItem mnemonicParsing="false" onAction="#nuevoAlumno" text="Alumno" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Buscar">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#buscarPrestamos" text="Prestamo" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Estadisticas">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#mostrarEstadisticas" text="Por Curso" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Ayuda">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#acercaDe" text="Acerca De ..." />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<TabPane prefHeight="503.0" prefWidth="751.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="En Prestamo">
+					<content>
+						<VBox prefHeight="200.0" prefWidth="100.0">
+							<children>
+								<Label prefHeight="62.0" prefWidth="718.0" style="-fx-font-weight: bold; -fx-font: 20 Arial;" text="PRESTAMOS EN CURSO" textAlignment="RIGHT" />
+								<TableView fx:id="tvPrestamosEnCurso" prefHeight="402.0" prefWidth="751.0">
+									<columns>
+										<TableColumn fx:id="tcPCtipolibro" prefWidth="91.0" text="Tipo de Libro" />
+										<TableColumn fx:id="tcPCtitulolibro" prefWidth="215.0" text="Titulo" />
+										<TableColumn fx:id="tcPCalumno" prefWidth="213.0" text="Alumno" />
+										<TableColumn fx:id="tcPCfechaprestamo" minWidth="0.0" prefWidth="231.0" text="Fecha de Prestamo" />
+									</columns>
+									<contextMenu>
+										<ContextMenu>
+											<items>
+												<MenuItem mnemonicParsing="false" onAction="#devolverPrestamo" text="Devolver" />
+												<SeparatorMenuItem mnemonicParsing="false" />
+												<MenuItem mnemonicParsing="false" onAction="#borrarPrestamo" text="Borrar" />
+											</items>
+										</ContextMenu>
+									</contextMenu>
+								</TableView>
+							</children>
+						</VBox>
+					</content>
+				</Tab>
+				<Tab text="Devueltos">
+					<content>
+						<VBox prefHeight="250.0" prefWidth="751.0">
+							<children>
+								<Label prefHeight="40.0" prefWidth="751.0" style="-fx-font-weight: bold; -fx-font: 20 Arial;" text="PRESTAMOS DEVUELTOS" />
+								<TableView fx:id="tvPrestamosDevueltos" prefHeight="373.0" prefWidth="718.0">
+									<columns>
+										<TableColumn fx:id="tcPDtipolibro" prefWidth="89.0" text="Tipo de Libro" />
+										<TableColumn fx:id="tcPDtitulolibro" prefWidth="187.0" text="Titulo" />
+										<TableColumn fx:id="tcPDalumno" minWidth="0.0" prefWidth="213.0" text="Alumno" />
+										<TableColumn fx:id="tcPDfechaprestamo" prefWidth="127.0" text="Fecha de Prestamo" />
+										<TableColumn fx:id="tcPDfechadevolucion" prefWidth="134.0" text="Fecha de Devolucion" />
+									</columns>
+									<contextMenu>
+										<ContextMenu>
+											<items>
+												<MenuItem mnemonicParsing="false" onAction="#borrarDevolucion" text="Borrar" />
+											</items>
+										</ContextMenu>
+									</contextMenu>
+								</TableView>
+							</children>
+						</VBox>
+					</content>
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/sello.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+				</Tab>
+				<Tab text="Libros">
+					<content>
+						<VBox prefHeight="200.0" prefWidth="100.0">
+							<children>
+								<Label prefHeight="48.0" prefWidth="1053.0" style="-fx-font-weight: bold; -fx-font: 20 Arial;" text="LIBROS y AUDIOLIBROS" />
+								<TableView fx:id="tvLibros" prefHeight="387.0" prefWidth="751.0">
+									<columns>
+										<TableColumn fx:id="tcTLtipolibro" prefWidth="92.0" text="Tipo de Libro" />
+										<TableColumn fx:id="tcTLtitulo" prefWidth="133.0" text="Titulo" />
+										<TableColumn fx:id="tcTLautor" minWidth="0.0" prefWidth="221.0" text="Autor" />
+										<TableColumn fx:id="tcTLpaginas" minWidth="0.0" prefWidth="103.0" text="Nº de Paginas" />
+										<TableColumn fx:id="tcTLduracion" minWidth="0.0" prefWidth="79.0" text="Duracion" />
+										<TableColumn fx:id="tcTLpuntos" prefWidth="89.0" text="Puntos" />
+									</columns>
+									<contextMenu>
+										<ContextMenu>
+											<items>
+												<MenuItem mnemonicParsing="false" onAction="#borrarLibro" text="Borrar" />
+											</items>
+										</ContextMenu>
+									</contextMenu>
+								</TableView>
+							</children>
+						</VBox>
+					</content>
+               <graphic>
+                  <ImageView fitHeight="88.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/libro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+				</Tab>
+				<Tab text="Alumnos">
+					<content>
+						<VBox prefHeight="200.0" prefWidth="100.0">
+							<children>
+								<Label prefHeight="123.0" prefWidth="718.0" style="-fx-font-weight: bold; -fx-font: 20 Arial;" text="ALUMNOS" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+								<TableView fx:id="tvAlumnos" prefHeight="463.0" prefWidth="751.0">
+									<columns>
+										<TableColumn fx:id="tcTAnombre" prefWidth="240.0" text="Nombre" />
+										<TableColumn fx:id="tcTAcorreo" prefWidth="320.0" text="Correo" />
+										<TableColumn fx:id="tcTAcurso" minWidth="0.0" prefWidth="157.0" text="Curso" />
+									</columns>
+									<contextMenu>
+										<ContextMenu>
+											<items>
+												<MenuItem mnemonicParsing="false" onAction="#borrarAlumno" text="Borrar" />
+											</items>
+										</ContextMenu>
+									</contextMenu>
+								</TableView>
+							</children>
+						</VBox>
+					</content>
+               <graphic>
+                  <ImageView fitHeight="58.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/64e97a538865341a45bd37df4fad1579-icono-de-chat-de-usuario-de-personas-by-vexels.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</VBox>

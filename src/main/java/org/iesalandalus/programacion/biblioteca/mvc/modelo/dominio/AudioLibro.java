@@ -1,12 +1,5 @@
-/*Implementa la clase AudioLibro que extienda la clase Libro y que se comporte como se indica en el enunciado. 
- *Para que todo siga funcionando correctamente deberás modificar alguna que otra clase más. Realiza un commit.*/
-
 package org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio;
-/**
- * 
- * @author Juanjo
- *
- */
+
 public class AudioLibro extends Libro {
 
 	private static final long serialVersionUID = 1L;
@@ -35,8 +28,14 @@ public class AudioLibro extends Libro {
 		this.duracion = duracion;
 	}
 	
+	@Override
 	public float getPuntos() {
 		return (duracion / MINUTOS_PARA_RECOMPENSA + 1) * PUNTOS_PREMIO;
+	}
+	
+	@Override
+	public String getNombreClase() {
+		return "Audiolibro";
 	}
 	
 	@Override

@@ -9,6 +9,9 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    
+    // JavaFX
+    id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
 repositories {
@@ -33,6 +36,10 @@ dependencies {
 
 //Añadido por mí
 apply plugin: 'application'
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
 
 mainClassName = 'org.iesalandalus.programacion.biblioteca.MainApp'
 

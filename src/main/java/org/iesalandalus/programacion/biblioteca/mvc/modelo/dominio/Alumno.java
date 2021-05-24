@@ -33,7 +33,7 @@ public class Alumno implements Serializable{
 		if (!correo.matches(ER_CORREO)) {
 			throw new IllegalArgumentException("ERROR: El formato del correo no es válido.");
 		}
-		Alumno alumnoFicticio = new Alumno("Juanjo Casenave", correo, Curso.PRIMERO);
+		Alumno alumnoFicticio = new Alumno("Enrique Octavio", correo, Curso.PRIMERO);
 		return alumnoFicticio;
 	}
 

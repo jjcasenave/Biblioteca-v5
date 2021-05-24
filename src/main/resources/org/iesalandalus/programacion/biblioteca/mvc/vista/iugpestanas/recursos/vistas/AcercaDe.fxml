@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane styleClass="vbox" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="399.0" prefWidth="380.0">
+         <children>
+            <ImageView fitHeight="203.0" fitWidth="192.0" layoutX="94.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
+               <image>
+                  <Image url="@../imagenes/dibujoprogramacion.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="8.0" layoutY="257.0" prefHeight="20.0" prefWidth="334.0" style="-fx-font: 16 Arial;" text="MODULO DE PROGRAMACIÓN - JAVA FX" textAlignment="JUSTIFY" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="257.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="159.0" layoutY="291.0" text="BIBLIOTECA" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+            <Label layoutX="200.0" layoutY="325.0" prefHeight="16.0" prefWidth="349.0" text="Juan José Casenave Alonso" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <Label layoutX="178.0" layoutY="357.0" text="2021" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

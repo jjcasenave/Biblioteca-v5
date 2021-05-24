@@ -107,6 +107,15 @@ public class Prestamo implements Serializable {
 		return fechaDevolucion;
 	}
 
+
+    public String getFechaDevolucionString() {
+    	if (fechaDevolucion == null) {
+    		return "Sin Devolver";
+    	} else {
+    		return fechaDevolucion.toString();
+    	}
+    }
+	
 	private void setFechaDevolucion(LocalDate fechaDevolucion) {
 		if (this.fechaDevolucion != null) {
 			throw new IllegalArgumentException("ERROR: La devolución ya estaba registrada.");

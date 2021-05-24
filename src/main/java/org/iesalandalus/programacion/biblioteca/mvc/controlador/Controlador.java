@@ -6,16 +6,13 @@ import java.util.Map;
 
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.biblioteca.mvc.modelo.IFuenteDatos;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.IModelo;
-import org.iesalandalus.programacion.biblioteca.mvc.modelo.Modelo;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Alumno;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Curso;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Libro;
 import org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio.Prestamo;
-import org.iesalandalus.programacion.biblioteca.mvc.modelo.negocio.ficheros.FactoriaFuenteDatosFicheros;
 import org.iesalandalus.programacion.biblioteca.mvc.vista.IVista;
-import org.iesalandalus.programacion.biblioteca.mvc.vista.texto.VistaTexto;
+
 
 public class Controlador implements IControlador {
 
@@ -29,9 +26,8 @@ public class Controlador implements IControlador {
 		if (vista == null) {
 			throw new IllegalArgumentException("ERROR: La vista no puede ser nula.");
 		}
-		IFuenteDatos iFuenteDatos = new FactoriaFuenteDatosFicheros();
-		this.modelo = new Modelo(iFuenteDatos);
-		this.vista = new VistaTexto();
+		this.modelo = modelo;
+		this.vista = vista;
 		this.vista.setControlador(this);
 	}
 

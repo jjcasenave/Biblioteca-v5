@@ -1,5 +1,3 @@
-/*Haz que la clase Libro sea abstracta y que se adecúe al diagrama de clases. Realiza un commit.*/
-
 package org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio;
 
 import java.io.Serializable;
@@ -40,6 +38,8 @@ public abstract class Libro implements Serializable {
 	}
 
 	public abstract float getPuntos();
+	
+	public abstract String getNombreClase();
 	
 	public String getTitulo() {
 		return titulo;

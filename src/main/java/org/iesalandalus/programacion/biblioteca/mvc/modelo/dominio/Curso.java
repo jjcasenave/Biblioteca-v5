@@ -1,7 +1,3 @@
-/*Crea el enumerado Curso, en el paquete adecuado con las siguientes instancias (PRIMERO, SEGUNDO, TERCERO y CUARTO).
- *Cada instancia aceptará en su constructor el texto a mostrar por el método toString (1º ESO, 2º ESO, 3º ESO y 4º ESO).
- */
-
 package org.iesalandalus.programacion.biblioteca.mvc.modelo.dominio;
 
 public enum Curso {
@@ -18,3 +14,4 @@ public enum Curso {
 		return cadenaAMostrar;
 	}
 }
+
