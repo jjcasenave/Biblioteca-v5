@@ -15,13 +15,22 @@
                   <Image url="@../imagenes/dibujoprogramacion.png" />
                </image>
             </ImageView>
-            <Label layoutX="8.0" layoutY="257.0" prefHeight="20.0" prefWidth="334.0" style="-fx-font: 16 Arial;" text="MODULO DE PROGRAMACIÓN - JAVA FX" textAlignment="JUSTIFY" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="257.0">
+            <Label layoutX="8.0" layoutY="257.0" prefHeight="20.0" prefWidth="334.0" style="-fx-font: 16 Arial;" text="JavaFX" textAlignment="JUSTIFY" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="257.0">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="15.0" />
                </font></Label>
-            <Label layoutX="159.0" layoutY="291.0" text="BIBLIOTECA" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
-            <Label layoutX="200.0" layoutY="325.0" prefHeight="16.0" prefWidth="349.0" text="Juan José Casenave Alonso" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-            <Label layoutX="178.0" layoutY="357.0" text="2021" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <Label layoutX="159.0" layoutY="291.0" text="Aplicación Biblioteca v4" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="200.0" layoutY="325.0" prefHeight="16.0" prefWidth="349.0" text="Juan José Casenave Alonso" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="178.0" layoutY="357.0" text="2021" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
          </children>
       </AnchorPane>
    </children>
