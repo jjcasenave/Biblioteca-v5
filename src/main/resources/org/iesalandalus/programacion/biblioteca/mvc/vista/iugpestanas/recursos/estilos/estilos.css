@@ -1,6 +1,6 @@
 * {
 	-fx-font: 14 arial;
-	-fx-base: #5c9770;
+	-fx-base: #b0c4de;
 }
 
 .tab {
@@ -11,18 +11,12 @@
 	-fx-border-color: transparent;
 }
 
-.label {
-	-fx-font-weight: 400;
-	-fx-alignment: center;
-}
-
 .vbox {
-	-fx-background-color: #5c9770;
+	-fx-background-color: #b0c4de;
 }
 
 .menu-item, .context-menu {
-	-fx-background-color: #629171;
-;
+	-fx-background-color: #b0c4de;
 }
 
 .menu-item:hover {
@@ -33,12 +27,12 @@
 	-fx-background-radius: 10;
 }
 
-#btAnadir,{
-	-fx-font: 14 "arial";
+#btAnadir, #btAceptar, #btListar, #btAnadirHoras, #btAnadirPrecioMaterial {
+	-fx-font: 22 "arial";
 	-fx-base: #b6e7c9;
 }
 
-#btAtras {
-	-fx-font: 14 "arial";
+#btCancelar, #btBorrar, #btCerrar {
+	-fx-font: 20 "arial";
 	-fx-base: #dc143c;
 }
