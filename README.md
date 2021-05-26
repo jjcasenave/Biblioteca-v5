@@ -2,31 +2,36 @@
 ## Profesor: José Ramón Jiménez Reyes
 ## Alumno: Juan José Casenave Alonso
 
-Desde el IES Al-Ándalus nos acaban de comentar que por favor añadamos persistencia a los datos introducidos, ya que tal y como está ahora la aplicación no es funcional. Por tanto, en este **cuarto spring** añadiremos persistencia a los datos utilizando para ello ficheros de objetos, para lo que sustituiremos el modelo que teníamos de memoria, por un modelo de ficheros.
+El cliente nos acaba de dar unos nuevos requisitos a aplicar sobre la última versión que le mostramos y que le gustó bastante. Lo que nos pide el cliente es lo siguiente:
 
-El diagrama de clases queda como te muestro a continuación y poco a poco te iré explicando los diferentes pasos a realizar:
+Que la aplicación no almacene los datos en ficheros y que lo haga en una base de datos creada para tal efecto.
+Los datos de la BD, que es una BD MongoDB, son los siguientes:
 
-![Diagrama de clases para tutorias](src/main/resources/biblioteca.png)
+Servidor: localhost o 127.0.01.
+Puerto: 27017
+BD: biblioteca
+Usuario: biblioteca
+Contraseña: biblioteca-2021
+Tu tarea consiste en dotar a la aplicación de la tarea anterior de un nuevo modelo de datos que en vez de utilizar ficheros para almacenar los datos lo haga haciendo uso de una Base de Datos NoSQL. Se pide al menos:
 
-En este repositorio de GitHub hay un esqueleto de proyecto gradle que ya lleva incluidos todos los test necesarios que el programa debe pasar.
+Acomodar el proyecto para que gradle gestione la dependencia con el driver para java de MongoDB en su última versión. Además deberás modificar el proyecto para que se puedan ejecutar todas las versiones: ficheros con IU textual, ficheros con IU gráfica, BD con IU textual y BD con IU gráfica, haciendo uso de los parámetros pasados a la aplicación.
+Gestionar los alumnos para que su persistencia se lleve a cabo por medio de dicha BD.
+Gestionar los libros para que su persistencia se lleve a cabo por medio de dicha BD.
+Gestionar los préstamos para que su persistencia se lleve a cabo por medio de dicha BD.
+Para ello debes realizar las siguientes acciones:
 
-Por tanto, tu tarea va a consistir en completar los siguientes apartados:
+Lo primero que debes hacer es crear un repositorio  en GitHub a partir de tu repositorio de la tarea anterior.
+Clona dicho repositorio localmente para empezar a modicfiarlo. Modifica el fichero README.md para que indique tus datos y los de esta tarea. Realiza tu primer commit.
+Instala localmente el servidor MongoDB y crea la base datos y como propietario el usuario y la contraseña que se indican.
+Realiza los cambios necesarios para que el proyecto pueda lanzar la aplicación eligiendo tanto la vista como el modelo (la fuente de datos) por parámetros. Realiza el commit correspondiente.
+Haz que la gestión de alumnos utilice la persistencia en la BD. Realiza el commit correspondiente.
+Haz que la gestión de libros utilice la persistencia en la BD. Realiza el commit correspondiente.
+Haz que la gestión de préstamos utilice la persistencia en la BD. Realiza el commit correspondiente.
+Se valorará:
 
-1. Lo primero que debes hacer es realizar un **fork** del repositorio donde he colocado el proyecto gradle con la estructura del proyecto y todos los test necesarios. Clona tu repositorio remoto recién copiado en github a un repositorio local que será donde irás realizando lo que a continuación se te pide. Añade tu nombre al fichero `README.md` en el apartado "Alumno". Copia los ficheros del directorio `src/main/java` de tu tarea anterior al repositorio local. Realiza tu primer commit.
-2. Refactoriza para adecuar el proyecto al diagrama de clases. El paquete para las clases de negocio sea `ficheros`, la fuente de datos sea `FICHEROS`, etc.
-3. Haz que las clases de dominio (para las que sea necesario) sean serializables para que se puedan leer y escribir de ficheros de objetos. Realiza un commit.
-4. Implementa los métodos `comenzar` y `terminar` para la clase de negocio `Alumnos`. Añádelos también al interfaz correspondiente. El fichero de alumnos (al que debes referirte de forma relativa) se denominará `alumnos.dat` y estará situado en una carpeta denominada `datos` que se encontrará en la raíz del proyecto. Realiza un commit.
-5. Implementa los métodos `comenzar` y `terminar` para la clase de negocio `Libros`. Añádelos también al interfaz correspondiente. El fichero de libros (al que debes referirte de forma relativa) se denominará `libros.dat` y estará situado en una carpeta denominada `datos` que se encontrará en la raíz del proyecto. Realiza un commit.
-6. Implementa los métodos `comenzar` y `terminar` para la clase de negocio `Prestamos`. Añádelos también al interfaz correspondiente. El fichero de préstamos (al que debes referirte de forma relativa) se denominará `prestamos.dat` y estará situado en una carpeta denominada `datos` que se encontrará en la raíz del proyecto. Realiza un commit.
-7. Modifica la clase `Modelo` y la interfaz `IModelo` para que contemple estos métodos y su implementación. Realiza un commit.
-8. Haz las modificaciones oportunas en la clase `Controlador` para que al comenzar se lean los diferentes ficheros y al salir se escriban los mismos. Realiza un commit y súbelo a tu repositorio remoto.
-
-
-###### Se valorará:
-- La indentación debe ser correcta en todas las clases.
-- El nombre de las variables debe ser adecuado.
-- Se debe utilizar la clase `Entrada` para realizar la entrada por teclado.
-- El proyecto debe pasar todas las pruebas que van en el esqueleto del mismo y toda entrada del programa será validada para evitar que el programa termine abruptamente debido a una excepción.
-- Se deben utilizar los comentarios adecuados.
-- Se valorará la corrección ortográfica tanto en los comentarios como en los mensajes que se muestren al usuario.
-
+La nomenclatura del repositorio de GitHub y del archivo entregado sigue las indicaciones de entrega.
+La indentación debe ser correcta en cada uno de los apartados.
+El nombre de las variables debe ser adecuado.
+El proyecto debe pasar todas las pruebas que van en el esqueleto del mismo y toda entrada del programa será validada para evitar que el programa termine abruptamente debido a una excepción.
+Se deben utilizar los comentarios adecuados.
+Se valorará la corrección ortográfica tanto en los comentarios como en los mensajes que se muestren al usuario.
