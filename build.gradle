@@ -32,6 +32,10 @@ dependencies {
     
 	// Uso de Mockito
     testCompile "org.mockito:mockito-inline:+"
+    
+    // MongoDB Driver
+	//compile 'org.mongodb:mongodb-driver-sync:4.0.2'
+	compile 'org.mongodb:mongodb-driver-sync:4.1.1'
 }
 
 //Añadido por mí
